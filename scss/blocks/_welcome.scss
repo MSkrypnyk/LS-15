@@ -1,0 +1,36 @@
+.welcome {
+  padding: 96rem 26rem 96rem 8rem;
+  @include mobile {
+    padding: var(--padding-mobile);
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      gap: 40rem;
+    }
+  }
+
+  &__hello {
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 169%;
+    color: var(--color-span);
+    margin-bottom: 24rem;
+  }
+
+  &__desc {
+    margin-top: 8rem;
+    margin-bottom: 24rem;
+  }
+
+  &__img {
+    transition: 0.2s all ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

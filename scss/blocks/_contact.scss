@@ -1,0 +1,108 @@
+.contact {
+  padding: 96rem 8rem 56rem 96rem;
+  @include mobile {
+    padding: var(--padding-mobile);
+  }
+  &__title {
+    margin-bottom: 24rem;
+  }
+
+  &__desc {
+    max-width: 685rem;
+    margin-bottom: 56rem;
+  }
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 96rem;
+  @include mobile {
+    flex-direction: column;
+    gap: 40rem;
+    justify-content: center;
+  }
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+  &__a {
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 256%;
+    color: var(--color-title);
+  }
+
+  span {
+    font-weight: 700;
+    color: var(--color-span);
+  }
+}
+
+.contact-form {
+  max-width: 540rem;
+  width: 100%;
+}
+.field {
+  display: block;
+  margin-bottom: 32rem;
+
+  &__input {
+    width: 100%;
+    outline: 0;
+    padding: 11rem 18rem;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 256%;
+    color: var(--color-title);
+    border: 0;
+    background: var(--bg-input);
+    &::placeholder {
+      color: var(--color-title);
+  }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 166px;
+    max-height: 400px;
+  }
+}
+
+.about-social {
+  padding-top: 56rem;
+  max-width: 685rem;
+  display: flex;
+  @include mobile {
+    padding-top: 5rem;
+  }
+  flex-direction: column;
+  &__title {
+    font-weight: 700;
+    font-size: 40rem;
+    color: var(--white);
+    margin-bottom: 24rem;
+    transition: 0.2s all ease-in-out;
+    &:hover {
+      color: var(--color-span);
+    }
+  }
+
+  &__desc {
+    max-width: 685rem;
+    margin-bottom: 56rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16rem;
+  }
+
+  &__a {
+    display: inline-block;
+  }
+}

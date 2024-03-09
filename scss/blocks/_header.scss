@@ -1,0 +1,66 @@
+.header {
+  padding: 16rem 11rem 16rem 11rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-size: 24rem;
+    margin-bottom: 0;
+  }
+
+  &__ul {
+    display: flex;
+    text-align: center;
+    gap: 27rem;
+    @include mobile {
+      position: fixed;
+      width: 70%;
+      height: 100%;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+      align-items: center;
+      padding-top: 200rem;
+      background-color: rgba($color: #000000, $alpha: 0.9);
+      transform: translateX(-120%);
+      transition: 0.4s all ease-in-out;
+    }
+
+    &._active {
+      transform: translateX(0);
+    }
+
+    .icon-close {
+      position: absolute;
+      top: 40rem;
+      right: 40rem;
+    }
+  }
+
+  &__a {
+    font-weight: 400;
+    font-size: 16rem;
+    text-transform: uppercase;
+    color: var(--color-nav);
+    transition: 0.2s all ease-in-out;
+    &:hover {
+      color: var(--white);
+    }
+  }
+}
+
+.is-active {
+  color: var(--white);
+}
+
+.icon-menu,
+.icon-close {
+  cursor: pointer;
+  color: var(--color-title);
+  display: none;
+
+  @include mobile {
+    display: inline-block;
+  }
+}

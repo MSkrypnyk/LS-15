@@ -1,0 +1,60 @@
+.about {
+  padding: 96rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mobile {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 40rem;
+    padding: 40rem 20rem;
+  }
+
+  &__img {
+    position: relative;
+    max-width: 475rem;
+    width: 100%;
+    border-radius: var(--br-img);
+    padding-top: 20rem;
+    margin-right: 70rem;
+
+    @include mobile {
+      max-width: 300rem;
+      margin-inline: auto;
+    }
+    transition: 0.2s all ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__img-backdrop {
+    border: 16rem solid var(--color-span);
+    border-radius: inherit;
+    max-width: 475rem;
+    width: 100%;
+    aspect-ratio: 0.94;
+    position: relative;
+  }
+
+  &__img img {
+    position: absolute;
+    top: 15rem;
+    left: 35rem;
+    border-radius: inherit;
+    flex-shrink: 0;
+
+    @include mobile {
+      top: 5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32rem;
+  }
+
+  &__desc {
+    margin-top: 18rem;
+    margin-bottom: 40rem;
+  }
+}

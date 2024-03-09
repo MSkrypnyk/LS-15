@@ -1,0 +1,65 @@
+.experience {
+  padding: 85rem 0;
+  background: var(--bg-experience);
+  @include mobile {
+    padding: var(--padding-mobile);
+  }
+  &_title {
+    font-family: var(--second-family);
+    margin-bottom: 24rem;
+  }
+}
+
+.experience-list {
+  margin-top: 80rem;
+  display: grid;
+  grid-template-columns: 366rem repeat(auto-fill, 336rem) 366rem;
+  gap: 29rem;
+
+  @include desktop-small {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+.experience-item {
+  padding: 32rem;
+  background: $bg-primary;
+  border-radius: 12rem;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    background-color: darken($bg-primary, 2%);
+    transform: scaleY(1.1);
+  }
+  &__period {
+    font-weight: 400;
+    font-size: 20rem;
+    line-height: 135%;
+    color: var(--color-desc-second);
+    margin-bottom: 8rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26rem;
+    line-height: 158%;
+    color: var(--color-span);
+  }
+
+  &__editor {
+    font-weight: 700;
+    font-size: 16rem;
+    line-height: 169%;
+    color: var(--color-desc-second);
+    margin-bottom: 8rem;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 169%;
+    color: var(--color-desc);
+  }
+}
